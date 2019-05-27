@@ -318,18 +318,18 @@ public class HMac implements I_Mac {
 		// Length is expressed in bytes
 		blockLengths = new HashMap<String, Integer>();
 		// MD
-		blockLengths.put("MD2", new Integer(16));
-		blockLengths.put("MD4", new Integer(64));
-		blockLengths.put("MD5", new Integer(64));
+		blockLengths.put("MD2", Integer.valueOf(16));
+		blockLengths.put("MD4", Integer.valueOf(64));
+		blockLengths.put("MD5", Integer.valueOf(64));
 		// SHA-d
-		blockLengths.put("SHA-1", new Integer(64));
-		blockLengths.put("SHA-224", new Integer(64));
-		blockLengths.put("SHA-256", new Integer(64));
-		blockLengths.put("SHA-384", new Integer(128));
-		blockLengths.put("SHA-512", new Integer(128));
+		blockLengths.put("SHA-1", Integer.valueOf(64));
+		blockLengths.put("SHA-224", Integer.valueOf(64));
+		blockLengths.put("SHA-256", Integer.valueOf(64));
+		blockLengths.put("SHA-384", Integer.valueOf(128));
+		blockLengths.put("SHA-512", Integer.valueOf(128));
 		int i = 0;
 		Integer b = blockLengths.get(hashAlg.getAlgorithm().trim());
-		b = (b == null) ? new Integer(0) : b;
+		b = (b == null) ? Integer.valueOf(0) : b;
 		i = b.intValue();
 		if (i == 0)
 			throw new DigestException("Undetermined digest block length!");

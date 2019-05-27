@@ -309,7 +309,6 @@ public class Index implements Cloneable {
 	 * @return the array of model indexes removed from the index.
 	 */
 	public static int[] remove(Index index, int from, int to) {
-		// TODO the array should not be shorter than the model length
 		if (to < from) {
 			int temp = to;
 			to = from;

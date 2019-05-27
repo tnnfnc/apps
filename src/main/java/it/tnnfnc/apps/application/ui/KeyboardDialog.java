@@ -280,14 +280,11 @@ public class KeyboardDialog extends JDialog {
 
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
-
 				if (textComponent != null) {
 					try {
 						textComponent.getDocument().insertString(
 								textComponent.getCaretPosition(), t, null);
 					} catch (BadLocationException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}

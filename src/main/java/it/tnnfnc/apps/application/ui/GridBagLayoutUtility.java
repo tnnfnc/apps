@@ -242,7 +242,7 @@ public class GridBagLayoutUtility {
 	 * 
 	 * @param gbc
 	 *            the object constraints.
-	 * @return TODO
+	 * @return a new instance. 
 	 */
 	public static GridBagConstraints refreshConstraints(GridBagConstraints gbc) {
 		/* Constraints default */

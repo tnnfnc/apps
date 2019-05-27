@@ -451,16 +451,12 @@ public abstract class AbstractApplication<D extends Document> implements I_IOBas
 		// frame.pack();
 		// exists = true;
 		// } catch (ClassNotFoundException e) {
-		// // TODO Auto-generated catch block
 		// e.printStackTrace();
 		// } catch (InstantiationException e) {
-		// // TODO Auto-generated catch block
 		// e.printStackTrace();
 		// } catch (IllegalAccessException e) {
-		// // TODO Auto-generated catch block
 		// e.printStackTrace();
 		// } catch (UnsupportedLookAndFeelException e) {
-		// // TODO Auto-generated catch block
 		// e.printStackTrace();
 		// }
 		// }

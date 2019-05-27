@@ -61,13 +61,11 @@ public class MemoryResource extends AbstractResource {
 
 	@Override
 	public InputStream getInputStream() throws IOException {
-		// TODO Read from the output stream.
 		return inputStream;
 	}
 
 	@Override
 	public OutputStream getOutputStream() throws IOException {
-		// TODO reset after the closing
 		return outputStream;
 	}
 

@@ -45,7 +45,7 @@ public class XmlCipherOutputStream extends FilterOutputStream {
 	 * @param cipher
 	 *            the initialized cipher.
 	 * @param properties
-	 *            TODO
+	 *
 	 * @throws IOException
 	 *             when something goes wrong.
 	 */

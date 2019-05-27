@@ -103,7 +103,7 @@ public class FieldLayout {
 			gbc.gridy = columns.get(column);
 			gbc.gridy++;
 		} catch (IndexOutOfBoundsException e) {
-			columns.add(new Integer(0));
+			columns.add(Integer.valueOf(0));
 			gbc.gridy = 0;
 		}
 		JPanel panel = createPanel();
@@ -118,7 +118,7 @@ public class FieldLayout {
 		}
 		container.add(panel, gbc);
 		// Update the last y
-		columns.set(column, new Integer(gbc.gridy));
+		columns.set(column, Integer.valueOf(gbc.gridy));
 		gbc.gridwidth = 1;
 	}
 
@@ -169,7 +169,7 @@ public class FieldLayout {
 		gbc.gridx = column + 1;
 		gbc.gridy = columns.get(column);
 		// Update the columns
-		columns.add(new Integer(gbc.gridy + 1));
+		columns.add(Integer.valueOf(gbc.gridy + 1));
 		gbc.gridwidth = span;
 		gbc.insets = new Insets(2, 10, 0, 2); // top, left, bottom, right,
 		JPanel panel = createPanel();
@@ -184,7 +184,7 @@ public class FieldLayout {
 		}
 		container.add(panel, gbc);
 		// Update the last y
-		// columns.set(column, new Integer(gbc.gridy + 1));
+		// columns.set(column, Integer.valueOf(gbc.gridy + 1));
 		gbc.gridwidth = 1;
 	}
 

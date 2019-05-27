@@ -101,7 +101,7 @@ public class TableProperties {
 			String value = p.getProperty(getColumnKey(t.getIdentifier()));
 			if (value != null) {
 				t.setPreferredWidth(parseWidth(value));
-				tableColumns.put(new Integer(parsePosition(value)), t);
+				tableColumns.put(Integer.valueOf(parsePosition(value)), t);
 			} else {
 				removedColumns.add(t);
 			}
@@ -110,7 +110,7 @@ public class TableProperties {
 		// Prepare the table column
 		int i = 0;
 		TableColumn t = null;
-		while ((t = tableColumns.get(new Integer(i++))) != null) {
+		while ((t = tableColumns.get(Integer.valueOf(i++))) != null) {
 			columnModel.moveColumn(
 					columnModel.getColumnIndex(t.getIdentifier()), i);
 		}

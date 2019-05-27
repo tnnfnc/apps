@@ -103,40 +103,5 @@ public class TabbedPaneProperties {
 			}
 
 		}
-
-		// for (int i = 0; i < tabs.length; i++) {
-		// System.out.println(" TabComponent " + " index " + i + " category= "
-		// + tabs[i]);
-		// }
-
-		// TODO Rebuild the tabs
-		// if (1 < 1) {
-		// for (int i = 0; i < tabs.length; i++) {
-		// int tabindex = tabpane.indexOfTabComponent((tabs[i]));
-		// System.out.println(" TabComponent " + " tab-index " + tabindex
-		// + " category= " + tabs[i]);
-		// if (tabindex > -1) {
-		// String title = tabpane.getTitleAt(tabindex);
-		// Icon icon = tabpane.getIconAt(tabindex);
-		// Component component = tabpane.getComponentAt(tabindex);
-		// String tooltip = tabpane.getToolTipTextAt(tabindex);
-		// // System.out.println(" tabs[" + i + "] = " + tabs[i]);
-		// if (tabs[i] instanceof TabComponent) {
-		// // System.out.println(" TabComponent added  " +
-		// // "style = "
-		// // + ((TabComponent) tabs[i]).getTabStyle());
-		// tabpane.insertTab(
-		// ((TabComponent) tabs[i]).getTabStyle(), icon,
-		// component, tooltip, i);
-		// // tabpane.remove(tabindex);
-		// } else {
-		// // System.out.println(" TabComponent standard  "
-		// // + "no style = " + tabs[i]);
-		// tabpane.insertTab(title, icon, component, tooltip, i);
-		// // tabpane.remove(tabindex);
-		// }
-		// }
-		// }
-		// }
 	}
 }

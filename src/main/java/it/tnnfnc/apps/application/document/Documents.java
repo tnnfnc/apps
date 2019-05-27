@@ -46,22 +46,24 @@ public class Documents<D extends Document> extends ArrayList<D> {
 	/**
 	 * Gets a document.
 	 * 
-	 * @param name
-	 *            the document name.
+	 * @param name the document name.
 	 * @return the document.
 	 */
 	public D get(String name) {
-		return this.get(indexOf(name));
+		for (D d : this) {
+			if (d.getDocumentName().equalsIgnoreCase(name)) {
+				return d;
+			}
+		}
+		return null;
 	}
 
 	/**
 	 * Returns a deep copy of a document.
 	 * 
-	 * @param index
-	 *            the index.
+	 * @param index the index.
 	 * @return the document.
-	 * @throws CloneNotSupportedException
-	 *             when the copying process returns an error.
+	 * @throws CloneNotSupportedException when the copying process returns an error.
 	 */
 	@SuppressWarnings("unchecked")
 	public D copy(int index) throws CloneNotSupportedException {

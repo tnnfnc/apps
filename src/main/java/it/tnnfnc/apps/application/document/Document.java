@@ -61,8 +61,7 @@ public abstract class Document implements Comparable<Document> {
 	protected ObjectStatusModel<?> traceModel;
 
 	/**
-	 * Returns the document URL. The document url is the same of its resource
-	 * URL.
+	 * Returns the document URL. The document url is the same of its resource URL.
 	 * 
 	 * @return the document URL. The url of a saved document is a valid URL.
 	 */
@@ -72,11 +71,10 @@ public abstract class Document implements Comparable<Document> {
 	}
 
 	/**
-	 * Sets the document URL. The document url is the same of its resource, if
-	 * no resources are linked to the document an internal url is provided.
+	 * Sets the document URL. The document url is the same of its resource, if no
+	 * resources are linked to the document an internal url is provided.
 	 * 
-	 * @param name
-	 *            the new document URL.
+	 * @param name the new document URL.
 	 */
 	public void setDocumentName(String name) {
 		this.documentName = name;
@@ -94,8 +92,7 @@ public abstract class Document implements Comparable<Document> {
 	/**
 	 * Set the document version.
 	 * 
-	 * @param the
-	 *            document version to set
+	 * @param the document version to set
 	 */
 	public void setVersion(String docVer) {
 		this.documentVersion = docVer;
@@ -113,8 +110,7 @@ public abstract class Document implements Comparable<Document> {
 	/**
 	 * Set true when a change occurred.
 	 * 
-	 * @param changed
-	 *            true when a change occurred.
+	 * @param changed true when a change occurred.
 	 */
 	public void setChanged(boolean changed) {
 		this.changed = changed;
@@ -143,8 +139,7 @@ public abstract class Document implements Comparable<Document> {
 	/**
 	 * Sets the resource for this document and lock the resource.
 	 * 
-	 * @param r
-	 *            the resource for this document.
+	 * @param r the resource for this document.
 	 */
 	public boolean setResource(I_Resource r) {
 		if (isLocked() || r == null) {
@@ -172,8 +167,7 @@ public abstract class Document implements Comparable<Document> {
 	/**
 	 * Sets the lock status of this document.
 	 * 
-	 * @param locked
-	 *            the lock status.
+	 * @param locked the lock status.
 	 */
 	public void setLocked(boolean locked) {
 		this.locked = locked;
@@ -189,8 +183,7 @@ public abstract class Document implements Comparable<Document> {
 	/**
 	 * Notify listeners that the document is changed.
 	 * 
-	 * @param event
-	 *            the change event.
+	 * @param event the change event.
 	 */
 	protected void fireDocumentChange(DocumentChangeEvent event) {
 		// Guaranteed to return a non-null array
@@ -209,8 +202,7 @@ public abstract class Document implements Comparable<Document> {
 	/**
 	 * Add a document listener.
 	 * 
-	 * @param listener
-	 *            the data change listener.
+	 * @param listener the data change listener.
 	 */
 	public void addDocumentChangeListener(I_DocumentChangeListener listener) {
 		eventListenerList.add(I_DocumentChangeListener.class, listener);
@@ -219,8 +211,7 @@ public abstract class Document implements Comparable<Document> {
 	/**
 	 * Remove a document listener.
 	 * 
-	 * @param listener
-	 *            the data change listener.
+	 * @param listener the data change listener.
 	 */
 	public void removeDocumentChangeListener(I_DocumentChangeListener listener) {
 		eventListenerList.remove(I_DocumentChangeListener.class, listener);
@@ -242,35 +233,31 @@ public abstract class Document implements Comparable<Document> {
 	 * Copy this document.
 	 * 
 	 * @return a deep copy of this document.
-	 * @throws CloneNotSupportedException
-	 *             when the copying process returns an error.
+	 * @throws CloneNotSupportedException when the copying process returns an error.
 	 */
 	public abstract Document copy() throws CloneNotSupportedException;
 
 	/**
 	 * Open the document.
 	 * 
-	 * @throws IOException
-	 *             when the document is locked or the process failed on the IO
-	 *             operation.
+	 * @throws IOException when the document is locked or the process failed on the
+	 *                     IO operation.
 	 */
 	public abstract void open() throws IOException;
 
 	/**
 	 * Save this document to the current output resource.
 	 * 
-	 * @throws IOException
-	 *             when the document is locked or the process failed on the IO
-	 *             operation.
+	 * @throws IOException when the document is locked or the process failed on the
+	 *                     IO operation.
 	 */
 	public abstract void save() throws IOException;
 
 	/**
 	 * Close the document. It does nothing. Subclasses must implement it.
 	 * 
-	 * @throws IOException
-	 *             when the document is locked or the process failed on the IO
-	 *             operation.
+	 * @throws IOException when the document is locked or the process failed on the
+	 *                     IO operation.
 	 */
 	public abstract void close() throws IOException;
 

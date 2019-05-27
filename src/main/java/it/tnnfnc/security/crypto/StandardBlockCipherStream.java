@@ -36,8 +36,6 @@ public class StandardBlockCipherStream implements I_BlockCipherStream {
 	@Override
 	public void init(boolean forEncryption, AlgorithmParameters params)
 			throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -47,7 +45,6 @@ public class StandardBlockCipherStream implements I_BlockCipherStream {
 
 	@Override
 	public AlgorithmParameters getParameters() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

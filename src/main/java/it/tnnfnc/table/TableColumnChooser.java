@@ -208,9 +208,9 @@ public class TableColumnChooser extends JPanel implements ActionListener {
 			getModel().addRow(new Object[] { //
 					tcm.getColumn(i), // Column id
 					table.getColumnName(i), // Header name
-					new Boolean(true), // Visible
-					new Boolean(true), // Enable sort
-					new Boolean(true), // Enable filter
+					true, // Visible
+					true, // Enable sort
+					true, // Enable filter
 					new Object(), // Comparator
 			});
 		}
@@ -316,7 +316,7 @@ public class TableColumnChooser extends JPanel implements ActionListener {
 			for (int i = 0; i < dataVector.size(); i++) {
 				Vector<Object> row = (Vector<Object>) dataVector.get(i);
 				// Display
-				row.set(display, new Boolean(selected));
+				row.set(display, selected);
 			}
 			this.fireTableRowsUpdated(0, dataVector.size());
 		}
@@ -388,7 +388,7 @@ public class TableColumnChooser extends JPanel implements ActionListener {
 				Vector<Object> row = (Vector) dataVector.get(i);
 				TableColumn t_i = (TableColumn) row.get(tableColumn);
 				// Display
-				row.set(display, new Boolean(contains(t_i) > -1));
+				row.set(display, contains(t_i) > -1);
 				//
 				TableOperator op = operatorModel.getColumnControl(t_i);
 				if (op != null) {

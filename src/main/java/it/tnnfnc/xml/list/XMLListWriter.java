@@ -41,7 +41,7 @@ import it.tnnfnc.xml.XmlUtil;
  * 
  */
 public class XMLListWriter {
-	// TODO It may be interesting to write XML sequentially providing
+	// It may be interesting to write XML sequentially providing
 	// instructions to map field into an XML structure.
 	// public static final String DOCUMENT_TYPE = "content";
 	private XMLListItemAdapter xmlAdapter;

@@ -13,7 +13,7 @@ public class EncodingAlgorithmFactory {
 	public EncodingAlgorithmFactory(String... encoders) {
 		for (String encoder : encoders) {
 			try {
-				addAlgorithm((I_BytesEncoder) Class.forName(encoder).newInstance());
+				addAlgorithm((I_BytesEncoder) Class.forName(encoder).getDeclaredConstructor().newInstance());
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
